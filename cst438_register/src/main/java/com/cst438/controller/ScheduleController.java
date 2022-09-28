@@ -46,8 +46,8 @@ public class ScheduleController {
 	/*
 	 * get current schedule for student.
 	 */
-	@GetMapping("/schedule")
-	public ScheduleDTO getSchedule( @RequestParam("year") int year, @RequestParam("semester") String semester ) {
+	@GetMapping("/schedule")  
+    public ScheduleDTO getSchedule( @RequestParam("year") int year, @RequestParam("semester") String semester ) {
 		System.out.println("/schedule called.");
 		String student_email = "test@csumb.edu";   // student's email 
 		

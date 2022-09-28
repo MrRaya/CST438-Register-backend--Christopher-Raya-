@@ -1,13 +1,17 @@
 package com.cst438.domain;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
+
+
 @Entity
 public class Student {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int student_id;
@@ -15,7 +19,8 @@ public class Student {
 	private String email;
 	private int statusCode;
 	private String status;
-	
+
+
 	public Student() {
 		super();
 	}
@@ -47,9 +52,11 @@ public class Student {
 	public String getStatus() {
 		return status;
 	}
+
 	public void setStatus(String status) {
 		this.status = status;
 	}
+
 	@Override
 	public String toString() {
 		return "Student [student_id=" + student_id + ", name=" + name + ", email=" + email + ", statusCode="
