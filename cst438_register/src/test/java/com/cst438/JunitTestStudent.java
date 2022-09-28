@@ -98,9 +98,9 @@ public class JunitTestStudent {
 	@Test
 	public void updateCourse() throws Exception {
 		Student student = studentRepository.findById(TEST_STUDENT_ID);
-		student.setStatus("Hold");
+		student.setStatus("Open");
 		Student updatedStudent = studentRepository.save(student);
-		Assertions.assertThat(updatedStudent.getStatus()).isEqualTo("Hold");
+		Assertions.assertThat(updatedStudent.getStatus()).isEqualTo("Open");
 		
 		
 	}
