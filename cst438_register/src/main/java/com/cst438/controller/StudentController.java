@@ -57,7 +57,11 @@ public class StudentController {
 		String email = student.getEmail();
 		Student find= studentRepository.findByEmail(email);
 		if(find == null) {
-			studentRepository.save(student);
+			Student stud = new Student();
+			stud.setEmail(student.getEmail());
+			stud.setName(student.getName());
+			stud.setStatusCode(student.getStatusCode());
+			studentRepository.save(stud);
 			return student;
 		}else {
 			System.out.println("/n student is in database" + email);
